@@ -242,8 +242,8 @@ public class GuessMethods {
 
     }
 
-    public static void readTOP10(Connection conn) throws SQLException { //KRISTINE: table visualization
-        String sql = "SELECT * , ROW_NUMBER () OVER (ORDER BY scores_moves DESC) AS Ranking FROM scores LIMIT 10"; //KRISTINE: added Ranking
+    public static void readTOP10(Connection conn) throws SQLException {
+        String sql = "SELECT * , ROW_NUMBER () OVER (ORDER BY scores_moves DESC) AS Ranking FROM scores LIMIT 10";
 
         Statement statement = conn.createStatement();
         ResultSet resultSet = statement.executeQuery(sql);
